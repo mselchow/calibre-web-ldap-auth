@@ -4,8 +4,8 @@ apt-get update
 
 if [ ! -f /usr/bin/pip ]; then
   echo "Installing Python-Pip and Flask-SimpleLDAP"
-  apt-get install -y python-pip
-  pip install flask-simpleldap -U
+  apt-get install -y python3-pip
+  pip3 install --no-cache-dir -U flask-simpleldap
 fi
 
 if [ ! -d /usr/lib/python2.7/dist-packages/ldap ]; then
