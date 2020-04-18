@@ -1,0 +1,13 @@
+#!/usr/bin/with-contenv bash
+
+if [ ! -f /usr/bin/pip ]; then
+  echo "Installing Python-Pip and Flask-SimpleLDAP"
+  apt install -y python-pip
+  pip install flask-simpleldap -U
+fi
+
+if [ ! -d /usr/lib/python2.7/dist-packages/ldap ]; then
+  echo "Installing python-ldap"
+  apt install -y python-ldap
+fi
+
